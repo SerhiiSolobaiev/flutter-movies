@@ -5,7 +5,7 @@ This test project is designed to help developers become familiar with essential 
 - Performing API calls
 - Interacting with a database
 - Implementing the Flutter BLoC architecture
-- Building application screens using a declarative UI
+- Building application screens using Flutter Widget (declarative UI)
 - Managing routing between screens
 - Working with dependency management
 
@@ -18,4 +18,3 @@ Upon completion, the Flutter development team from the mobile department will re
 ## Recommended libraries to use during the project development
 - Flutter BLoC architecture - https://pub.dev/packages/flutter_bloc
 - API - https://pub.dev/packages/dio
-- Database - https://pub.dev/packages/floor
