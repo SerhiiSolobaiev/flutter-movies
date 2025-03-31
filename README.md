@@ -18,10 +18,10 @@ By completing this task, developers will gain valuable insights into Flutter’s
 
 **[TMDB (The Movie Database) public API](https://developer.themoviedb.org/docs/getting-started)**
 
-Endpoint to retrieve a list of movies
+Endpoint to retrieve a list of movies \
 **https://api.themoviedb.org/3/movie/popular?language=en-US&page=page_number**
 
-Endpoint to retrieve a movie details
+Endpoint to retrieve a movie details \
 **https://api.themoviedb.org/3/movie/movie_id?language=en-US**
 
 Headers required to perform request
