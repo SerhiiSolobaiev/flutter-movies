@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:dio/dio.dart';
-import 'package:flutter_onboarding/models/item_model.dart';
+import 'package:flutter_onboarding/models/movie_results.dart';
+
+import '../models/movie.dart';
 
 class MovieApiProvider {
   final dio = Dio();
@@ -27,21 +29,23 @@ class MovieApiProvider {
       return ItemModel.fromJson(response.data);
     } catch (e) {
       if (e is DioException) {
-        print("LOOOL error: ${e.response}");
+        print("LOOOL getMoviesList error: ${e.response}");
       } else {
-        print("LOOOL Unexpected error: $e");
+        print("LOOOL getMoviesList Unexpected error: $e");
       }
       return null;
     }
   }
 
-  Future<ItemModel?> getMoviesDetails(String movieId) async {
+  Future<Result?> getMoviesDetails(int movieId) async {
     try {
+      await Future.delayed(const Duration(milliseconds: 300));
+
       final response = await dio.get(
-        "https://api.themoviedb.org/3/movie",
+        "https://api.themoviedb.org/3/movie/$movieId",
         queryParameters: {
           'language': 'en-US',
-          'movie_id': movieId,
+          // 'movie_id': movieId,
         },
         options: Options(
           headers: {
@@ -51,13 +55,14 @@ class MovieApiProvider {
         ),
       );
 
+      print("LOOOL movieId=$movieId, movie=$response");
       // Map the full response to ItemModel
-      return ItemModel.fromJson(response.data);
+      return Result.fromJson(response.data);
     } catch (e) {
       if (e is DioException) {
-        print("LOOOL error: ${e.response}");
+        print("LOOOL getMoviesDetails error: ${e.response}");
       } else {
-        print("LOOOL Unexpected error: $e");
+        print("LOOOL getMoviesDetails Unexpected error: $e");
       }
       return null;
     }

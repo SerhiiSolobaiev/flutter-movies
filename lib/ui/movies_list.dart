@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding/models/item_model.dart';
+import 'package:flutter_onboarding/models/movie_results.dart';
 
 import '../resources/movie_api_provider.dart';
 import 'movie_details.dart';
