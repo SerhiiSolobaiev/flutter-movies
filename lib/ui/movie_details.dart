@@ -5,7 +5,7 @@ import '../resources/movie_api_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
-  final Result movie;
+  final Movie movie;
   final MovieApiProvider apiProvider = MovieApiProvider();
 
   MovieDetailsScreen({super.key, required this.movie});
@@ -14,7 +14,7 @@ class MovieDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(movie.title ?? 'No Title')),
-      body: FutureBuilder<Result?>(
+      body: FutureBuilder<Movie?>(
         future: apiProvider.getMoviesDetails(movie.id),
         builder: (context, snapshot) {
           final isLoading = snapshot.connectionState == ConnectionState.waiting;

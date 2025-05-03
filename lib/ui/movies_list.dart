@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding/models/movie_results.dart';
-
+import 'package:flutter_onboarding/repository/movies_repository.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../bloc/movies_list_bloc.dart';
+import '../di/di.dart';
 import '../resources/movie_api_provider.dart';
 import 'movie_details.dart';
 
@@ -13,29 +16,41 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final MovieApiProvider apiProvider = MovieApiProvider();
+  final _bloc = getIt<MoviesListBloc>();
+
+  @override
+  void initState() {
+    super.initState();
+    _bloc.add(MoviesInitialEvent());
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Popular Movies'),
-      ),
-      body: FutureBuilder<ItemModel?>(
-        future: apiProvider.getMoviesList(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
-          } else if (!snapshot.hasData || snapshot.data == null) {
-            return const Center(child: Text('No data'));
-          } else {
-            final movies = snapshot.data!.results;
-            print("LOOOL movies=${movies.map((it) => it.title).toList()}");
-            return ListView.builder(
-              itemCount: movies.length,
+    return BlocProvider(
+      create: (context) => _bloc,
+      child: BlocBuilder<MoviesListBloc, MoviesListState>(
+          builder: (context, state) {
+        return Scaffold(
+            appBar: AppBar(
+              title: const Text('Popular Movies'),
+            ),
+            body: buildMoviesList(state));
+      }),
+    );
+  }
+
+  Widget buildMoviesList(MoviesListState state) {
+    return Builder(
+      builder: (context) {
+        if (state.isLoading) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (state.movies.isEmpty) {
+          return const Center(child: Text('No data'));
+        } else {
+          return ListView.builder(
+              itemCount: state.movies.length,
               itemBuilder: (context, index) {
-                final movie = movies[index];
+                final movie = state.movies[index];
                 return ListTile(
                   leading: Hero(
                     tag: 'moviePoster_${movie.id}',
@@ -70,11 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                 );
-              },
-            );
-          }
-        },
-      ),
+              });
+        }
+      },
     );
   }
 }

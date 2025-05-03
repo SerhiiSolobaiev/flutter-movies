@@ -1,4 +1,4 @@
-class Result {
+class Movie {
   int? _vote_count;
   int _id = 0;
   bool? _video;
@@ -8,8 +8,8 @@ class Result {
   String? _poster_path;
   String? _original_language;
   String? _original_title;
-  List<int> _genre_ids = [];         // For list endpoint (IDs only)
-  List<String> _genre_names = [];    // For details endpoint (Names)
+  final List<int> _genre_ids = [];         // For list endpoint (IDs only)
+  final List<String> _genre_names = [];    // For details endpoint (Names)
   String? _backdrop_path;
   bool? _adult;
   String? _overview;
@@ -21,7 +21,7 @@ class Result {
   int? _revenue;
   String? _homepage;
 
-  Result(result) {
+  Movie(result) {
     _vote_count = result['vote_count'];
     _id = result['id'];
     _video = result['video'];
@@ -81,12 +81,11 @@ class Result {
   int? get revenue => _revenue;
   String? get homepage => _homepage;
 
-  factory Result.fromJson(Map<String, dynamic> parsedJson) {
-    return Result(parsedJson);
+  factory Movie.fromJson(Map<String, dynamic> parsedJson) {
+    return Movie(parsedJson);
   }
 
-  String getGenresString(Result movie) {
-    // Assuming your Result model holds genres as List<int> or List<String>
+  String getGenresString(Movie movie) {
     if (movie.genre_ids.isNotEmpty) {
       return movie.genre_ids.join(', ');
     }

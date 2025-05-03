@@ -5,13 +5,13 @@ import 'package:flutter_onboarding/models/movie_results.dart';
 import '../models/movie.dart';
 
 class MovieApiProvider {
-  final dio = Dio();
+  final _dio = Dio();
   final _apiKey =
       'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMWY0ZDg2MzY0ZjY2YWI0OGJkNjJmMGMzYmM4YmJjOSIsIm5iZiI6MTc0MjM4OTY4OS41NzQwMDAxLCJzdWIiOiI2N2RhYzFiOTdiYTdkYTcxNjNhMWVjMWQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.w8AObWJ7pJ9yxTupyNJxNYOcSKocHXI4NvFcsz0mx8M';
 
-  Future<ItemModel?> getMoviesList() async {
+  Future<ItemModel?> getMovies() async {
     try {
-      final response = await dio.get(
+      final response = await _dio.get(
         "https://api.themoviedb.org/3/movie/popular",
         queryParameters: {
           'language': 'en-US',
@@ -25,7 +25,6 @@ class MovieApiProvider {
         ),
       );
 
-      // Map the full response to ItemModel
       return ItemModel.fromJson(response.data);
     } catch (e) {
       if (e is DioException) {
@@ -37,11 +36,11 @@ class MovieApiProvider {
     }
   }
 
-  Future<Result?> getMoviesDetails(int movieId) async {
+  Future<Movie?> getMoviesDetails(int movieId) async {
     try {
       await Future.delayed(const Duration(milliseconds: 300));
 
-      final response = await dio.get(
+      final response = await _dio.get(
         "https://api.themoviedb.org/3/movie/$movieId",
         queryParameters: {
           'language': 'en-US',
@@ -55,9 +54,7 @@ class MovieApiProvider {
         ),
       );
 
-      print("LOOOL movieId=$movieId, movie=$response");
-      // Map the full response to ItemModel
-      return Result.fromJson(response.data);
+      return Movie.fromJson(response.data);
     } catch (e) {
       if (e is DioException) {
         print("LOOOL getMoviesDetails error: ${e.response}");
