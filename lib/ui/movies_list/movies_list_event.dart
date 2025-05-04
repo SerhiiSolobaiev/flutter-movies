@@ -7,12 +7,9 @@ sealed class MoviesListEvent {
 
 final class MoviesInitialEvent extends MoviesListEvent {}
 
-final class MoviesLoadLocallyEvent extends MoviesListEvent {}
-
-final class MoviesLoadRemotelyEvent extends MoviesListEvent {}
-
 final class MovieClickedEvent extends MoviesListEvent {
-  final int movieId;
+  final BuildContext context;
+  final Movie movie;
 
-  const MovieClickedEvent(this.movieId);
+  const MovieClickedEvent(this.context, this.movie);
 }

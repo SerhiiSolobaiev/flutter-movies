@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'package:dio/dio.dart';
 import 'package:flutter_onboarding/models/movie_results.dart';
-
-import '../models/movie.dart';
+import 'package:flutter_onboarding/models/movie.dart';
 
 class MovieApiProvider {
   final _dio = Dio();
@@ -11,6 +10,8 @@ class MovieApiProvider {
 
   Future<ItemModel?> getMovies() async {
     try {
+      await Future.delayed(const Duration(milliseconds: 500)); // for testing
+
       final response = await _dio.get(
         "https://api.themoviedb.org/3/movie/popular",
         queryParameters: {
@@ -27,11 +28,7 @@ class MovieApiProvider {
 
       return ItemModel.fromJson(response.data);
     } catch (e) {
-      if (e is DioException) {
-        print("LOOOL getMoviesList error: ${e.response}");
-      } else {
-        print("LOOOL getMoviesList Unexpected error: $e");
-      }
+      print("LOOOL getMoviesList error: $e");
       return null;
     }
   }
@@ -56,11 +53,7 @@ class MovieApiProvider {
 
       return Movie.fromJson(response.data);
     } catch (e) {
-      if (e is DioException) {
-        print("LOOOL getMoviesDetails error: ${e.response}");
-      } else {
-        print("LOOOL getMoviesDetails Unexpected error: $e");
-      }
+      print("LOOOL getMoviesDetails error: $e");
       return null;
     }
   }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding/repository/storage/AppDatabaseBuilder.dart';
-import 'package:flutter_onboarding/ui/movies_list.dart';
+import 'package:flutter_onboarding/repository/storage/AppDatabase.dart';
+import 'package:flutter_onboarding/ui/movies_list/movies_list.dart';
 
 import 'di/di.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   di.setupDI();
-  await di.getIt<AppDatabaseBuilder>().build();
+  await di.getIt<AppDatabase>().init();
 
   runApp(const MyApp());
 }
