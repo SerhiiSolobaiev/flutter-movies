@@ -13,15 +13,20 @@ part 'movie_details_state.dart';
 class MovieDetailsBloc extends Bloc<MovieDetailsEvent, MovieDetailsState> {
   final MovieDetailsInteractor _movieInteractor;
 
-  MovieDetailsBloc(this._movieInteractor) : super(const MovieDetailsInitial()) {
+  MovieDetailsBloc(this._movieInteractor, Movie movie)
+      : super(MovieDetailsInitial(movie)) {
     on<MovieDetailsInitialEvent>((event, emit) async {
-
-      // try {
-      //   List<Movie> movies = await _movieInteractor.getMovies();
-      //   emit(MoviesListLoaded(false, movies));
-      // } catch (e) {
-      //   emit(MoviesListError(e.toString()));
-      // }
+      try {
+        final fullMovie =
+            await _movieInteractor.getMovieDetails(event.movie.id);
+        if (fullMovie != null) {
+          emit(MovieDetailsLoaded(fullMovie));
+        } else {
+          emit(MovieDetailsError("movie = null", event.movie));
+        }
+      } catch (e) {
+        emit(MovieDetailsError(e.toString(), event.movie));
+      }
     });
   }
 }

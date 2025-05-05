@@ -5,4 +5,8 @@ sealed class MovieDetailsEvent {
   const MovieDetailsEvent();
 }
 
-final class MovieDetailsInitialEvent extends MovieDetailsEvent {}
+final class MovieDetailsInitialEvent extends MovieDetailsEvent {
+  final Movie movie;
+
+  const MovieDetailsInitialEvent(this.movie);
+}

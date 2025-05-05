@@ -3,19 +3,21 @@ part of 'movie_details_bloc.dart';
 @immutable
 sealed class MovieDetailsState {
   final bool isLoading;
-  final Movie? movie;
+  final Movie movie;
 
   const MovieDetailsState(this.isLoading, this.movie);
 }
 
 final class MovieDetailsInitial extends MovieDetailsState {
-  const MovieDetailsInitial() : super(false, null);
+  const MovieDetailsInitial(Movie movie) : super(true, movie);
 }
 
 final class MovieDetailsLoaded extends MovieDetailsState {
-  const MovieDetailsLoaded(super.isLoading, super.movie);
+  const MovieDetailsLoaded(Movie movie) : super(false, movie);
 }
 
-final class MoviesListError extends MovieDetailsState {
-  const MoviesListError(String e) : super(false, null);
+final class MovieDetailsError extends MovieDetailsState {
+  final String error;
+
+  const MovieDetailsError(this.error, Movie movie) : super(false, movie);
 }

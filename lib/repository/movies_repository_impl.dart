@@ -35,7 +35,7 @@ class MoviesRepositoryImpl implements MoviesRepository {
   }
 
   @override
-  Future<Movie> getMovieDetails(int movieId) {
-    throw UnimplementedError();
+  Future<Movie?> getMovieDetails(int movieId) {
+    return apiProvider.getMoviesDetails(movieId);
   }
 }

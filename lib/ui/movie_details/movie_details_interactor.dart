@@ -6,7 +6,7 @@ class MovieDetailsInteractor {
 
   MovieDetailsInteractor(this._movieRepository);
 
-  Future<Movie> getMovieDetails(int movieId) {
+  Future<Movie?> getMovieDetails(int movieId) {
     return _movieRepository.getMovieDetails(movieId);
   }
 }
