@@ -1,4 +1,4 @@
-class MovieLocalModel {
+class Movie {
   final int id;
   final String title;
   final String overview;
@@ -6,23 +6,21 @@ class MovieLocalModel {
   final double voteAverage;
   final String releaseDate;
 
-  const MovieLocalModel({
+  final List<String> genreNames;
+  final int budget;
+  final int revenue;
+  final String homepage;
+
+  Movie({
     required this.id,
     required this.title,
     required this.overview,
     required this.posterPath,
     required this.voteAverage,
     required this.releaseDate,
+    this.genreNames = const [],
+    this.budget = 0,
+    this.revenue = 0,
+    this.homepage = "",
   });
-
-  Map<String, Object?> toMap() {
-    return {
-      'id': id,
-      'title': title,
-      'overview': overview,
-      'posterPath': posterPath,
-      'voteAverage' : voteAverage,
-      'releaseDate' : releaseDate,
-    };
-  }
 }

@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-import '../../models/movie.dart';
+import '../../data/movie.dart';
 import 'movie_details_interactor.dart';
 
 part 'movie_details_event.dart';
@@ -22,7 +22,7 @@ class MovieDetailsBloc extends Bloc<MovieDetailsEvent, MovieDetailsState> {
         if (fullMovie != null) {
           emit(MovieDetailsLoaded(fullMovie));
         } else {
-          emit(MovieDetailsError("movie = null", event.movie));
+          emit(MovieDetailsError("TBD", event.movie));
         }
       } catch (e) {
         emit(MovieDetailsError(e.toString(), event.movie));

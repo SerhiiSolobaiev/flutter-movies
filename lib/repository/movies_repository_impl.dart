@@ -1,41 +1,51 @@
 import 'package:flutter_onboarding/repository/movies_repository.dart';
 import 'package:flutter_onboarding/repository/storage/movies_storage.dart';
 
-import '../models/movie.dart';
-import '../network/movie_api_provider.dart';
+import '../network/movies_api_helper.dart';
+import 'mapper/mapper.dart';
+import '../data/movie.dart';
 
 class MoviesRepositoryImpl implements MoviesRepository {
-  final MovieApiProvider apiProvider;
+  final MoviesApiHelper apiHelper;
   final MoviesStorage moviesStorage;
+  final MovieMapper mapper;
 
-  MoviesRepositoryImpl(this.apiProvider, this.moviesStorage);
+  MoviesRepositoryImpl(this.apiHelper, this.moviesStorage, this.mapper);
 
   @override
   Future<List<Movie>> getMovies() async {
     final isDirty = await moviesStorage.isMoviesCacheDirty();
     final cached = await moviesStorage.getMovies();
-    final movies = cached.map((m) => Movie.fromLocal(m)).toList();
+    final cachedMovies = cached.map((m) => mapper.mapDaoToDomain(m)).toList();
 
-    if (!isDirty && movies.isNotEmpty) {
-      print("LOOOL return cached movies, size=${movies.length}");
-      return movies;
+    if (!isDirty && cachedMovies.isNotEmpty) {
+      print(
+          "MoviesRepository return cached movies, size=${cachedMovies.length}");
+      return cachedMovies;
     }
 
-    final response = await apiProvider.getMovies();
+    final response = await apiHelper.getMovies();
     if (response != null) {
-      final moviesFromApi = response.results;
+      final moviesFromApi = await mapper.mapResponseToMovies(response);
+
+      final localModels = moviesFromApi.map(mapper.mapDomainToDao).toList();
       await moviesStorage.deleteAll();
-      await moviesStorage
-          .addMovies(moviesFromApi.map((m) => m.toLocalModel()).toList());
-      print("LOOOL return moviesFromApi, size=${moviesFromApi.length}");
+      await moviesStorage.addMovies(localModels);
+
+      print(
+          "MoviesRepository return movies from api, size=${moviesFromApi.length}");
       return moviesFromApi;
     }
-    print("LOOOL return lol, size=${movies.length}");
-    return movies;
+
+    print(
+        "MoviesRepository return fallback cached movies, size=${cachedMovies.length}");
+    return cachedMovies;
   }
 
   @override
-  Future<Movie?> getMovieDetails(int movieId) {
-    return apiProvider.getMoviesDetails(movieId);
+  Future<Movie?> getMovieDetails(int movieId) async {
+    final response = await apiHelper.getMoviesDetails(movieId);
+    if (response == null) return null;
+    return mapper.mapResponseToMovie(response);
   }
 }

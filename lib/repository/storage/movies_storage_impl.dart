@@ -1,6 +1,6 @@
 import 'package:flutter_onboarding/repository/storage/AppDatabase.dart';
 import 'package:flutter_onboarding/repository/storage/movies_storage.dart';
-import 'package:flutter_onboarding/repository/storage/movie_local_model.dart';
+import 'package:flutter_onboarding/repository/storage/movie_dao_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'dart:async';
@@ -10,14 +10,15 @@ import 'package:sqflite/sqflite.dart';
 class MoviesStorageImpl implements MoviesStorage {
   final AppDatabase _database;
 
-  static const _cachedAtKey = 'cached_at'; // When movies was cached
-  static const _ttl = Duration(minutes: 5);
+  static const _cachedAtKey = 'cached_at';
+  static const _ttl = Duration(minutes: 5); // Time to live
+
   final String moviesTable = "movies";
 
   MoviesStorageImpl(this._database);
 
   @override
-  Future<void> addMovies(List<MovieLocalModel> movies) async {
+  Future<void> addMovies(List<MovieDaoModel> movies) async {
     final db = _database.db;
     final batch = db.batch();
 
@@ -35,7 +36,7 @@ class MoviesStorageImpl implements MoviesStorage {
   }
 
   @override
-  Future<List<MovieLocalModel>> getMovies() async {
+  Future<List<MovieDaoModel>> getMovies() async {
     final db = _database.db;
 
     final List<Map<String, dynamic>> movies = await db.query(moviesTable);
@@ -43,7 +44,7 @@ class MoviesStorageImpl implements MoviesStorage {
     try {
       return List.generate(movies.length, (i) {
         final movie = movies[i];
-        return MovieLocalModel(
+        return MovieDaoModel(
           id: movie['id'] as int,
           title: movie['title'] as String,
           overview: movie['overview'] as String,
@@ -53,7 +54,7 @@ class MoviesStorageImpl implements MoviesStorage {
         );
       });
     } catch (e) {
-      print("LOOOL getMovies from db error=$e");
+      print("MoviesStorage getMovies from db error=$e");
       return List.empty();
     }
   }

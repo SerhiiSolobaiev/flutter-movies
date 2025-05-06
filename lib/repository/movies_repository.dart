@@ -1,4 +1,4 @@
-import '../models/movie.dart';
+import '../data/movie.dart';
 
 abstract class MoviesRepository {
   Future<List<Movie>> getMovies();

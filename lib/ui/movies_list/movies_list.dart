@@ -41,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (state.isLoading) {
           return const Center(child: CircularProgressIndicator());
         } else if (state.movies.isEmpty) {
+          // TODO: show error
           return const Center(child: Text('No data'));
         } else {
           return ListView.builder(
@@ -57,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: toHeroContext.widget,
                       );
                     },
-                    child: movie.posterPath != null
+                    child: movie.posterPath.isNotEmpty
                         ? CachedNetworkImage(
                             imageUrl:
                                 'https://image.tmdb.org/t/p/w500${movie.posterPath}',
@@ -65,11 +66,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           )
                         : const SizedBox(width: 48),
                   ),
-                  title: Text(movie.title ?? 'No Title'),
+                  title: Text(movie.title),
                   subtitle: Row(children: [
-                    Text('Rating: ${movie.voteAverage}'),
+                    Text('Rating: ${movie.voteAverage.toStringAsFixed(1)}'),
                     const SizedBox(width: 8),
-                    Text('Year: ${movie.releaseDate?.split('-').first}')
+                    Text('Year: ${movie.releaseDate.split('-').first}')
                   ]),
                   onTap: () {
                     _bloc.add(MovieClickedEvent(context, movie));

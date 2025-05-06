@@ -1,4 +1,4 @@
-import '../../models/movie.dart';
+import '../../data/movie.dart';
 import '../../repository/movies_repository.dart';
 
 class MovieDetailsInteractor {

@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../di/di.dart';
-import '../../models/movie.dart';
+import '../../data/movie.dart';
 import 'movie_details_bloc.dart';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -42,7 +42,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
           builder: (context, state) {
             return Scaffold(
               appBar: AppBar(
-                title: Text(widget.movie.title ?? ""),
+                title: Text(widget.movie.title),
               ),
               body: buildMovieDetails(state),
             );
@@ -53,7 +53,6 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
   }
 
   Widget buildMovieDetails(MovieDetailsState state) {
-    print("LOOOL buildMovieDetails state=${state.movie}, ${state.isLoading}");
     final isLoading = state.isLoading;
     final movieDetails = state.movie;
     final isError = state is MovieDetailsError;
@@ -68,7 +67,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                 const EdgeInsets.only(left: 32.0, right: 32.0, bottom: 16.0),
             child: Hero(
               tag: 'movieImage_${movieDetails.id}',
-              child: movieDetails.posterPath != null
+              child: movieDetails.posterPath.isNotEmpty
                   ? CachedNetworkImage(
                       imageUrl:
                           'https://image.tmdb.org/t/p/w500${movieDetails.posterPath}',
@@ -80,11 +79,11 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                movieDetails.overview ?? '',
+                movieDetails.overview,
                 style: const TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 16),
-              Text('Rating: ${movieDetails.voteAverage}'),
+              Text('Rating: ${movieDetails.voteAverage.toStringAsFixed(1)}'),
               Text('Release Date: ${movieDetails.releaseDate}'),
               const SizedBox(height: 16),
 
@@ -104,16 +103,16 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
   Column buildLoadedMovieDetails(Movie movieDetails) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text('Genres: ${movieDetails.genreNames.join(', ')}'),
-      if (movieDetails.budget != null && movieDetails.budget != 0)
-        Text('Budget: \$${(movieDetails.budget! / 1000000).round()}M'),
-      if (movieDetails.revenue != null && movieDetails.revenue != 0)
-        Text('Revenue: \$${(movieDetails.revenue! / 1000000).round()}M'),
-      if (movieDetails.homepage != null && movieDetails.homepage!.isNotEmpty)
+      if (movieDetails.budget != 0)
+        Text('Budget: \$${(movieDetails.budget / 1000000).round()}M'),
+      if (movieDetails.revenue != 0)
+        Text('Revenue: \$${(movieDetails.revenue / 1000000).round()}M'),
+      if (movieDetails.homepage.isNotEmpty)
         Padding(
           padding: const EdgeInsets.only(top: 8.0),
           child: GestureDetector(
             onTap: () async {
-              final url = Uri.parse(movieDetails.homepage!);
+              final url = Uri.parse(movieDetails.homepage);
               if (await canLaunchUrl(url)) {
                 await launchUrl(url);
               }

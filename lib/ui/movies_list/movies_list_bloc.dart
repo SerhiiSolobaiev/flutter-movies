@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-import '../../models/movie.dart';
+import '../../data/movie.dart';
 import '../movie_details/movie_details.dart';
 import 'movies_interactor.dart';
 
