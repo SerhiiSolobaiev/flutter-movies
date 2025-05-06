@@ -1,8 +1,8 @@
 import 'package:flutter_onboarding/ui/movie_details/movie_details_bloc.dart';
-import 'package:flutter_onboarding/ui/movie_details/movie_details_interactor.dart';
+import 'package:flutter_onboarding/domain/movie_details_interactor.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../data/movie.dart';
+import '../../domain/movie.dart';
 
 void registerMovieDetailsScreenModule(GetIt getIt) {
   getIt.registerLazySingleton(() => MovieDetailsInteractor(getIt()));

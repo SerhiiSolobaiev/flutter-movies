@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../di/di.dart';
-import '../../data/movie.dart';
+import '../../domain/movie.dart';
 import 'movie_details_bloc.dart';
 
 import 'package:url_launcher/url_launcher.dart';

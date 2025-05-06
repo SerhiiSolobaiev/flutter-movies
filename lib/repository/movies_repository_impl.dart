@@ -1,9 +1,9 @@
 import 'package:flutter_onboarding/repository/movies_repository.dart';
 import 'package:flutter_onboarding/repository/storage/movies_storage.dart';
 
+import '../domain/movie.dart';
 import '../network/movies_api_helper.dart';
 import 'mapper/mapper.dart';
-import '../data/movie.dart';
 
 class MoviesRepositoryImpl implements MoviesRepository {
   final MoviesApiHelper apiHelper;

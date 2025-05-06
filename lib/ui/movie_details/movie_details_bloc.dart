@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-import '../../data/movie.dart';
-import 'movie_details_interactor.dart';
+import '../../domain/movie.dart';
+import '../../domain/movie_details_interactor.dart';
 
 part 'movie_details_event.dart';
 

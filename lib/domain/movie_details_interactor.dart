@@ -1,5 +1,5 @@
-import '../../data/movie.dart';
-import '../../repository/movies_repository.dart';
+import '../repository/movies_repository.dart';
+import 'movie.dart';
 
 class MovieDetailsInteractor {
   final MoviesRepository _movieRepository;

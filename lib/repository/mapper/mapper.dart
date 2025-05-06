@@ -1,6 +1,6 @@
+import '../../domain/movie.dart';
 import '../../network/movie_response.dart';
 import '../../network/movies_response.dart';
-import '../../data/movie.dart';
 import '../storage/movie_dao_model.dart';
 
 class MovieMapper {

@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-import '../../data/movie.dart';
+import '../../domain/movie.dart';
 import '../movie_details/movie_details.dart';
-import 'movies_interactor.dart';
+import '../../domain/movies_interactor.dart';
 
 part 'movies_list_event.dart';
 
