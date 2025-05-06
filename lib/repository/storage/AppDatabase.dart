@@ -7,7 +7,7 @@ class AppDatabase {
 
   late final Database _db;
 
-  Future<void> init() async {
+  Future init() async {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, _dbName);
 

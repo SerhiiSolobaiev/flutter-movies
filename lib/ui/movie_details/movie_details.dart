@@ -63,14 +63,12 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding:
-                const EdgeInsets.only(left: 32.0, right: 32.0, bottom: 16.0),
+            padding: const EdgeInsets.only(left: 32.0, right: 32.0, bottom: 16.0),
             child: Hero(
               tag: 'movieImage_${movieDetails.id}',
               child: movieDetails.posterPath.isNotEmpty
                   ? CachedNetworkImage(
-                      imageUrl:
-                          'https://image.tmdb.org/t/p/w500${movieDetails.posterPath}',
+                      imageUrl: 'https://image.tmdb.org/t/p/w500${movieDetails.posterPath}',
                     )
                   : const SizedBox.shrink(),
             ),
@@ -103,10 +101,8 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
   Column buildLoadedMovieDetails(Movie movieDetails) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text('Genres: ${movieDetails.genreNames.join(', ')}'),
-      if (movieDetails.budget != 0)
-        Text('Budget: \$${(movieDetails.budget / 1000000).round()}M'),
-      if (movieDetails.revenue != 0)
-        Text('Revenue: \$${(movieDetails.revenue / 1000000).round()}M'),
+      if (movieDetails.budget != 0) Text('Budget: \$${(movieDetails.budget / 1000000).round()}M'),
+      if (movieDetails.revenue != 0) Text('Revenue: \$${(movieDetails.revenue / 1000000).round()}M'),
       if (movieDetails.homepage.isNotEmpty)
         Padding(
           padding: const EdgeInsets.only(top: 8.0),

@@ -18,9 +18,8 @@ class MoviesStorageImpl implements MoviesStorage {
   MoviesStorageImpl(this._database);
 
   @override
-  Future<void> addMovies(List<MovieDaoModel> movies) async {
-    final db = _database.db;
-    final batch = db.batch();
+  Future addMovies(List<MovieDaoModel> movies) {
+    final batch = _database.db.batch();
 
     for (final movie in movies) {
       batch.insert(
@@ -30,32 +29,32 @@ class MoviesStorageImpl implements MoviesStorage {
       );
     }
 
-    SharedPreferencesAsync()
-        .setInt(_cachedAtKey, DateTime.now().millisecondsSinceEpoch);
-    await batch.commit(noResult: true);
+    SharedPreferencesAsync().setInt(_cachedAtKey, DateTime.now().millisecondsSinceEpoch);
+    return batch.commit(noResult: true);
   }
 
   @override
-  Future<List<MovieDaoModel>> getMovies() async {
-    final db = _database.db;
-
-    final List<Map<String, dynamic>> movies = await db.query(moviesTable);
-
+  Future<List<MovieDaoModel>> getMovies() {
     try {
-      return List.generate(movies.length, (i) {
-        final movie = movies[i];
-        return MovieDaoModel(
-          id: movie['id'] as int,
-          title: movie['title'] as String,
-          overview: movie['overview'] as String,
-          posterPath: movie['posterPath'] as String,
-          voteAverage: movie['voteAverage'] as double,
-          releaseDate: movie['releaseDate'] as String,
-        );
+      return _database.db.query(moviesTable).then((moviesFromDb) {
+        return List.generate(moviesFromDb.length, (i) {
+          final movie = moviesFromDb[i];
+          return MovieDaoModel(
+            id: movie['id'] as int,
+            title: movie['title'] as String,
+            overview: movie['overview'] as String,
+            posterPath: movie['posterPath'] as String,
+            voteAverage: movie['voteAverage'] as double,
+            releaseDate: movie['releaseDate'] as String,
+          );
+        });
+      }).catchError((e) {
+        print("MoviesStorage query error in getMovies: $e");
+        return <MovieDaoModel>[];
       });
     } catch (e) {
-      print("MoviesStorage getMovies from db error=$e");
-      return List.empty();
+      print("MoviesStorage error in getMovies: $e");
+      return Future.value(<MovieDaoModel>[]);
     }
   }
 

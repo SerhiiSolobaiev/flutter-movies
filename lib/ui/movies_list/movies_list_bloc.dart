@@ -29,7 +29,6 @@ class MoviesListBloc extends Bloc<MoviesListEvent, MoviesListState> {
   }
 
   void navigateToDetailsPage(context, movie) {
-    Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => MovieDetailsScreen(movie: movie)));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => MovieDetailsScreen(movie: movie)));
   }
 }

@@ -24,8 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => _bloc,
-      child: BlocBuilder<MoviesListBloc, MoviesListState>(
-          builder: (context, state) {
+      child: BlocBuilder<MoviesListBloc, MoviesListState>(builder: (context, state) {
         return Scaffold(
             appBar: AppBar(
               title: const Text('Popular Movies'),
@@ -51,8 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 return ListTile(
                   leading: Hero(
                     tag: 'movieImage_${movie.id}',
-                    flightShuttleBuilder: (flightContext, animation,
-                        flightDirection, fromHeroContext, toHeroContext) {
+                    flightShuttleBuilder: (flightContext, animation, flightDirection, fromHeroContext, toHeroContext) {
                       return RotationTransition(
                         turns: animation.drive(Tween(begin: 0.0, end: 1.0)),
                         child: toHeroContext.widget,
@@ -60,8 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     child: movie.posterPath.isNotEmpty
                         ? CachedNetworkImage(
-                            imageUrl:
-                                'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+                            imageUrl: 'https://image.tmdb.org/t/p/w500${movie.posterPath}',
                             width: 48,
                           )
                         : const SizedBox(width: 48),
