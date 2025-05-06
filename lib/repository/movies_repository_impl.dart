@@ -19,26 +19,20 @@ class MoviesRepositoryImpl implements MoviesRepository {
     final cachedMovies = cached.map((m) => mapper.mapDaoToDomain(m)).toList();
 
     if (!isDirty && cachedMovies.isNotEmpty) {
-      print(
-          "MoviesRepository return cached movies, size=${cachedMovies.length}");
       return cachedMovies;
     }
 
     final response = await apiHelper.getMovies();
     if (response != null) {
-      final moviesFromApi = await mapper.mapResponseToMovies(response);
+      final moviesFromApi = mapper.mapResponseToMovies(response);
 
       final localModels = moviesFromApi.map(mapper.mapDomainToDao).toList();
       await moviesStorage.deleteAll();
       await moviesStorage.addMovies(localModels);
 
-      print(
-          "MoviesRepository return movies from api, size=${moviesFromApi.length}");
       return moviesFromApi;
     }
 
-    print(
-        "MoviesRepository return fallback cached movies, size=${cachedMovies.length}");
     return cachedMovies;
   }
 

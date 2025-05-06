@@ -4,12 +4,12 @@ import '../../data/movie.dart';
 import '../storage/movie_dao_model.dart';
 
 class MovieMapper {
-  Future<List<Movie>> mapResponseToMovies(MoviesResponse moviesResponse) async {
+  List<Movie> mapResponseToMovies(MoviesResponse moviesResponse) {
     final futures = moviesResponse.movies.map(mapResponseToMovie).toList();
-    return await Future.wait(futures);
+    return futures;
   }
 
-  Future<Movie> mapResponseToMovie(MovieResponse movieResponse) async {
+  Movie mapResponseToMovie(MovieResponse movieResponse) {
     return Movie(
       id: movieResponse.id ?? 0,
       title: movieResponse.title ?? '',

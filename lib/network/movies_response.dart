@@ -5,7 +5,7 @@ class MoviesResponse {
 
   MoviesResponse.fromJson(Map<String, dynamic> json) {
     movies = (json['results'] as List)
-        .map((element) => MovieResponse(json))
+        .map((movie) => MovieResponse(movie))
         .toList();
   }
 }
