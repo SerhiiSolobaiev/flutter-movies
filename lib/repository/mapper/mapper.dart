@@ -1,6 +1,6 @@
 part of repository_movies;
 
-class MovieMapper {
+class _MovieMapper {
   List<MovieLocalModel> mapResponseToMovies(MoviesResponse? moviesResponse) {
     if (moviesResponse == null) return List.empty();
     return moviesResponse.movies.mapNotNull(mapResponseToMovie).toList();

@@ -1,7 +1,7 @@
 part of movies_screen;
 
 void registerMovieScreenModule(GetIt getIt) {
-  getIt.registerLazySingleton(() => MoviesInteractor(getIt()));
-  getIt.registerLazySingleton(() => MovieUIMapper());
-  getIt.registerFactory(() => MoviesListBloc(getIt(), getIt()));
+  getIt.registerLazySingleton(() => _MoviesInteractor(getIt()));
+  getIt.registerLazySingleton(() => _MovieUIMapper());
+  getIt.registerFactory(() => _MoviesListBloc(getIt(), getIt()));
 }

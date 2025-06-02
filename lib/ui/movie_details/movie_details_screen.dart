@@ -1,7 +1,7 @@
 part of movies_screen;
 
 class MovieDetailsScreen extends StatefulWidget {
-  final MovieUIModel movie;
+  final _MovieUIModel movie;
 
   const MovieDetailsScreen({super.key, required this.movie});
 
@@ -10,20 +10,20 @@ class MovieDetailsScreen extends StatefulWidget {
 }
 
 class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
-  late final MovieDetailsBloc _bloc;
+  late final _MovieDetailsBloc _bloc;
 
   @override
   void initState() {
     super.initState();
-    _bloc = getIt<MovieDetailsBloc>(param1: widget.movie);
-    _bloc.add(LoadMovieDetailsEvent(widget.movie));
+    _bloc = getIt<_MovieDetailsBloc>(param1: widget.movie);
+    _bloc.add(_LoadMovieDetailsEvent(widget.movie));
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => _bloc,
-      child: BlocListener<MovieDetailsBloc, MovieDetailsState>(
+      child: BlocListener<_MovieDetailsBloc, _MovieDetailsState>(
         listener: (context, state) {
           if (state.error != null) {
             ScaffoldMessenger.of(context).showSnackBar(
@@ -31,7 +31,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
             );
           }
         },
-        child: BlocBuilder<MovieDetailsBloc, MovieDetailsState>(
+        child: BlocBuilder<_MovieDetailsBloc, _MovieDetailsState>(
           builder: (context, state) {
             return Scaffold(
               appBar: AppBar(
@@ -45,7 +45,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
     );
   }
 
-  Widget buildMovieDetails(MovieDetailsState state) {
+  Widget buildMovieDetails(_MovieDetailsState state) {
     final isLoading = state.isLoading;
     final movieDetails = state.movie;
     final isError = state.error != null;
@@ -88,11 +88,11 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
     );
   }
 
-  Widget _buildLoadedMovieDetails(MovieUIModel movieDetails) {
+  Widget _buildLoadedMovieDetails(_MovieUIModel movieDetails) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text('Genres: ${movieDetails.genreNames}'),
-      Text('Budget: \$${movieDetails.budget}M'),
-      Text('Revenue: \$${movieDetails.revenue}M'),
+      if (movieDetails.genreNames.isNotEmpty) Text('Genres: ${movieDetails.genreNames}'),
+      if (movieDetails.budget.isNotEmpty) Text('Budget: \$${movieDetails.budget}M'),
+      if (movieDetails.revenue.isNotEmpty) Text('Revenue: \$${movieDetails.revenue}M'),
       if (movieDetails.homepage.isNotEmpty)
         Padding(
           padding: const EdgeInsets.only(top: 8.0),

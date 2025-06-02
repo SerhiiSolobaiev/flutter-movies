@@ -1,11 +1,11 @@
 part of movies_screen;
 
 @immutable
-class MoviesListState {
+class _MoviesListState {
   final String title;
   final bool isLoading;
-  final List<MovieUIModel> movies;
+  final List<_MovieUIModel> movies;
   final String? error;
 
-  const MoviesListState({this.title = "", this.isLoading = true, this.movies = const [], this.error});
+  const _MoviesListState({this.title = "", this.isLoading = true, this.movies = const [], this.error});
 }

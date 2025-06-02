@@ -1,15 +1,15 @@
 part of movies_screen;
 
 @immutable
-sealed class MoviesListEvent {
-  const MoviesListEvent();
+sealed class _MoviesListEvent {
+  const _MoviesListEvent();
 }
 
-final class LoadMoviesEvent extends MoviesListEvent {}
+final class _LoadMoviesEvent extends _MoviesListEvent {}
 
-final class MovieClickedEvent extends MoviesListEvent {
+final class _MovieClickedEvent extends _MoviesListEvent {
   final BuildContext context;
-  final MovieUIModel movie;
+  final _MovieUIModel movie;
 
-  const MovieClickedEvent(this.context, this.movie);
+  const _MovieClickedEvent(this.context, this.movie);
 }

@@ -1,9 +1,9 @@
 part of movies_screen;
 
-class MoviesInteractor {
+class _MoviesInteractor {
   final MoviesRepository _movieRepository;
 
-  MoviesInteractor(this._movieRepository);
+  _MoviesInteractor(this._movieRepository);
 
   Future<List<MovieLocalModel>> getMovies() {
     return _movieRepository.getMovies();

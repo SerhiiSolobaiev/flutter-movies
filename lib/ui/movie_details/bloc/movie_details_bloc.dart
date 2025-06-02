@@ -1,27 +1,27 @@
 part of movies_screen;
 
-class MovieDetailsBloc extends Bloc<MovieDetailsEvent, MovieDetailsState> {
-  final MovieDetailsInteractor _movieInteractor;
-  final MovieUIMapper _mapper;
+class _MovieDetailsBloc extends Bloc<_MovieDetailsEvent, _MovieDetailsState> {
+  final _MovieDetailsInteractor _movieInteractor;
+  final _MovieUIMapper _mapper;
 
-  MovieDetailsBloc(this._movieInteractor, this._mapper, MovieUIModel movie) : super(MovieDetailsState(movie: movie)) {
-    on<LoadMovieDetailsEvent>(_onLoadMovie);
+  _MovieDetailsBloc(this._movieInteractor, this._mapper, _MovieUIModel movie) : super(_MovieDetailsState(movie: movie)) {
+    on<_LoadMovieDetailsEvent>(_onLoadMovie);
   }
 
   Future _onLoadMovie(
-    LoadMovieDetailsEvent event,
-    Emitter<MovieDetailsState> emit,
+      _LoadMovieDetailsEvent event,
+    Emitter<_MovieDetailsState> emit,
   ) async {
     try {
       final fullMovie = await _movieInteractor.getMovieDetails(event.movie.id);
       if (fullMovie != null) {
-        MovieUIModel fullMovieUIData = await _mapper.mapToDetailsUIData(fullMovie);
-        emit(MovieDetailsState(isLoading: false, movie: fullMovieUIData));
+        _MovieUIModel fullMovieUIData = await _mapper.mapToDetailsUIData(fullMovie);
+        emit(_MovieDetailsState(isLoading: false, movie: fullMovieUIData));
       } else {
-        emit(MovieDetailsState(isLoading: false, movie: event.movie, error: "oops"));
+        emit(_MovieDetailsState(isLoading: false, movie: event.movie, error: "oops"));
       }
     } catch (e) {
-      emit(MovieDetailsState(isLoading: false, movie: event.movie, error: e.toString()));
+      emit(_MovieDetailsState(isLoading: false, movie: event.movie, error: e.toString()));
     }
   }
 }

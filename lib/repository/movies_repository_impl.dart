@@ -1,14 +1,14 @@
 part of repository_movies;
 
-class MoviesRepositoryImpl implements MoviesRepository {
+class _MoviesRepositoryImpl implements MoviesRepository {
   final MoviesApiHelper apiHelper;
   final MovieDao moviesStorage;
-  final MovieMapper mapper;
+  final _MovieMapper mapper;
 
   static const _cachedAtKey = 'cached_at';
   static const _ttl = Duration(minutes: 5); // Time to live for cache
 
-  MoviesRepositoryImpl(this.apiHelper, this.moviesStorage, this.mapper);
+  _MoviesRepositoryImpl(this.apiHelper, this.moviesStorage, this.mapper);
 
   @override
   Future<List<MovieLocalModel>> getMovies() async {

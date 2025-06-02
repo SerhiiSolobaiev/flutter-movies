@@ -1,32 +1,32 @@
 part of movies_screen;
 
-class MoviesListBloc extends Bloc<MoviesListEvent, MoviesListState> {
-  final MoviesInteractor _movieInteractor;
-  final MovieUIMapper _mapper;
+class _MoviesListBloc extends Bloc<_MoviesListEvent, _MoviesListState> {
+  final _MoviesInteractor _movieInteractor;
+  final _MovieUIMapper _mapper;
 
-  MoviesListBloc(this._movieInteractor, this._mapper) : super(MoviesListState()) {
-    on<LoadMoviesEvent>(_onLoadMovies);
-    on<MovieClickedEvent>(_onNavigateToMovieDetails);
+  _MoviesListBloc(this._movieInteractor, this._mapper) : super(_MoviesListState()) {
+    on<_LoadMoviesEvent>(_onLoadMovies);
+    on<_MovieClickedEvent>(_onNavigateToMovieDetails);
   }
 
   Future _onLoadMovies(
-    LoadMoviesEvent event,
-    Emitter<MoviesListState> emit,
+    _LoadMoviesEvent event,
+    Emitter<_MoviesListState> emit,
   ) async {
-    emit(MoviesListState(isLoading: true));
+    emit(_MoviesListState(isLoading: true));
     try {
       final movies = await _movieInteractor.getMovies();
-      List<MovieUIModel> moviesUIData =
+      List<_MovieUIModel> moviesUIData =
       await Future.wait(movies.map(_mapper.mapToUIData));
-      emit(MoviesListState(title: "Popular Movies", movies: moviesUIData, isLoading: false, error: null));
+      emit(_MoviesListState(title: "Popular Movies", movies: moviesUIData, isLoading: false, error: null));
     } catch (e) {
-      emit(MoviesListState(error: e.toString(), isLoading: false));
+      emit(_MoviesListState(error: e.toString(), isLoading: false));
     }
   }
 
   Future _onNavigateToMovieDetails(
-      MovieClickedEvent event,
-      Emitter<MoviesListState> emit,
+      _MovieClickedEvent event,
+      Emitter<_MoviesListState> emit,
       ) async {
     Navigator.of(event.context).push(MaterialPageRoute(builder: (context) => MovieDetailsScreen(movie: event.movie)));
   }

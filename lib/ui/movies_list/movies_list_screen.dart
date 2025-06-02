@@ -8,19 +8,19 @@ class MoviesListScreen extends StatefulWidget {
 }
 
 class _MoviesListScreenState extends State<MoviesListScreen> {
-  final _bloc = getIt<MoviesListBloc>();
+  final _bloc = getIt<_MoviesListBloc>();
 
   @override
   void initState() {
     super.initState();
-    _bloc.add(LoadMoviesEvent());
+    _bloc.add(_LoadMoviesEvent());
   }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => _bloc,
-      child: BlocBuilder<MoviesListBloc, MoviesListState>(builder: (context, state) {
+      child: BlocBuilder<_MoviesListBloc, _MoviesListState>(builder: (context, state) {
         return Scaffold(
             appBar: AppBar(
               title: Text(state.title),
@@ -30,7 +30,7 @@ class _MoviesListScreenState extends State<MoviesListScreen> {
     );
   }
 
-  Widget _buildMoviesList(MoviesListState state) {
+  Widget _buildMoviesList(_MoviesListState state) {
     return Builder(
       builder: (context) {
         if (state.isLoading) {
@@ -64,7 +64,7 @@ class _MoviesListScreenState extends State<MoviesListScreen> {
                     Text('Year: ${movie.releaseDate}')
                   ]),
                   onTap: () {
-                    _bloc.add(MovieClickedEvent(context, movie));
+                    _bloc.add(_MovieClickedEvent(context, movie));
                   },
                 );
               });

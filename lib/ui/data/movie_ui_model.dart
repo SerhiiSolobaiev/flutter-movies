@@ -1,6 +1,6 @@
 part of movies_screen;
 
-class MovieUIModel {
+class _MovieUIModel {
   final int id;
   final String title;
   final String overview;
@@ -13,7 +13,7 @@ class MovieUIModel {
   final String revenue;
   final String homepage;
 
-  const MovieUIModel({
+  const _MovieUIModel({
     required this.id,
     required this.title,
     required this.overview,

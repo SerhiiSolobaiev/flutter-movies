@@ -1,8 +1,8 @@
 part of movies_screen;
 
 void registerMovieDetailsScreenModule(GetIt getIt) {
-  getIt.registerLazySingleton(() => MovieDetailsInteractor(getIt()));
-  getIt.registerFactoryParam<MovieDetailsBloc, MovieUIModel, void>(
-    (movie, _) => MovieDetailsBloc(getIt(), getIt(), movie),
+  getIt.registerLazySingleton(() => _MovieDetailsInteractor(getIt()));
+  getIt.registerFactoryParam<_MovieDetailsBloc, _MovieUIModel, void>(
+    (movie, _) => _MovieDetailsBloc(getIt(), getIt(), movie),
   );
 }
