@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_onboarding/repository/storage/AppDatabase.dart';
-import 'package:flutter_onboarding/ui/movies_list/movies_list.dart';
 
 import 'di/di.dart' as di;
+import 'ui/movies_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  di.setupDI();
-  await di.getIt<AppDatabase>().init();
+  await di.setupDI();
 
   runApp(const MyApp());
 }
@@ -24,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(),
+      home: const MoviesListScreen(),
     );
   }
 }

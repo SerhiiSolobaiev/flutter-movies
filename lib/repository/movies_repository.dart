@@ -1,7 +1,7 @@
-import '../domain/movie.dart';
+part of repository_movies;
 
-abstract class MoviesRepository {
-  Future<List<Movie>> getMovies();
+abstract interface class MoviesRepository {
+  Future<List<MovieLocalModel>> getMovies();
 
-  Future<Movie?> getMovieDetails(int movieId);
+  Future<MovieLocalModel?> getMovieDetails(int movieId);
 }

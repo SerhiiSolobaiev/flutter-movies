@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+part of network;
 
 class BearerInterceptor extends Interceptor {
   // should be hidden:

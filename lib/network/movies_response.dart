@@ -1,4 +1,4 @@
-import 'movie_response.dart';
+part of network;
 
 class MoviesResponse {
   late List<MovieResponse> movies;

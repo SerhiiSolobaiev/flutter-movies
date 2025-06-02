@@ -1,4 +1,6 @@
-class Movie {
+part of repository_movies;
+
+class MovieLocalModel {
   final int id;
   final String title;
   final String overview;
@@ -11,7 +13,7 @@ class Movie {
   final int revenue;
   final String homepage;
 
-  Movie({
+  MovieLocalModel({
     required this.id,
     required this.title,
     required this.overview,

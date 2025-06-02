@@ -1,10 +1,10 @@
 library di;
 
+import 'package:flutter_onboarding/app/app.dart';
+import 'package:flutter_onboarding/repository/repository_movies.dart';
 import 'package:get_it/get_it.dart';
 
-import '../network/movies_api_module.dart';
-import '../repository/repository_module.dart';
-import '../ui/movie_details/movie_details_screen_module.dart';
-import '../ui/movies_list/movies_screen_module.dart';
+import 'package:flutter_onboarding/network/network.dart';
+import 'package:flutter_onboarding/ui/movies_screen.dart';
 
 part 'service_locator.dart';

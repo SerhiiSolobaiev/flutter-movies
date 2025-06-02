@@ -1,12 +1,11 @@
-import '../repository/movies_repository.dart';
-import 'movie.dart';
+part of movies_screen;
 
 class MoviesInteractor {
   final MoviesRepository _movieRepository;
 
   MoviesInteractor(this._movieRepository);
 
-  Future<List<Movie>> getMovies() {
+  Future<List<MovieLocalModel>> getMovies() {
     return _movieRepository.getMovies();
   }
 }

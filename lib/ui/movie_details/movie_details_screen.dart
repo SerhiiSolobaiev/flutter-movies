@@ -1,14 +1,7 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../di/di.dart';
-import '../../domain/movie.dart';
-import 'movie_details_bloc.dart';
-
-import 'package:url_launcher/url_launcher.dart';
+part of movies_screen;
 
 class MovieDetailsScreen extends StatefulWidget {
-  final Movie movie;
+  final MovieUIModel movie;
 
   const MovieDetailsScreen({super.key, required this.movie});
 
@@ -23,7 +16,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
   void initState() {
     super.initState();
     _bloc = getIt<MovieDetailsBloc>(param1: widget.movie);
-    _bloc.add(MovieDetailsInitialEvent(widget.movie));
+    _bloc.add(LoadMovieDetailsEvent(widget.movie));
   }
 
   @override
@@ -32,7 +25,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
       create: (context) => _bloc,
       child: BlocListener<MovieDetailsBloc, MovieDetailsState>(
         listener: (context, state) {
-          if (state is MovieDetailsError) {
+          if (state.error != null) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text("Cannot load movie details")),
             );
@@ -55,7 +48,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
   Widget buildMovieDetails(MovieDetailsState state) {
     final isLoading = state.isLoading;
     final movieDetails = state.movie;
-    final isError = state is MovieDetailsError;
+    final isError = state.error != null;
 
     return SingleChildScrollView(
       padding: const EdgeInsets.all(16.0),
@@ -65,13 +58,10 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
           Padding(
             padding: const EdgeInsets.only(left: 32.0, right: 32.0, bottom: 16.0),
             child: Hero(
-              tag: 'movieImage_${movieDetails.id}',
-              child: movieDetails.posterPath.isNotEmpty
-                  ? CachedNetworkImage(
-                      imageUrl: 'https://image.tmdb.org/t/p/w500${movieDetails.posterPath}',
-                    )
-                  : const SizedBox.shrink(),
-            ),
+                tag: 'movieImage_${movieDetails.id}',
+                child: CachedNetworkImage(
+                  imageUrl: movieDetails.imageUrl,
+                )),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,7 +71,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                 style: const TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 16),
-              Text('Rating: ${movieDetails.voteAverage.toStringAsFixed(1)}'),
+              Text('Rating: ${movieDetails.voteAverage}'),
               Text('Release Date: ${movieDetails.releaseDate}'),
               const SizedBox(height: 16),
 
@@ -90,7 +80,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                   ? const SizedBox(height: 16)
                   : isLoading
                       ? const Center(child: CircularProgressIndicator())
-                      : buildLoadedMovieDetails(movieDetails)
+                      : _buildLoadedMovieDetails(movieDetails)
             ],
           ),
         ],
@@ -98,11 +88,11 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
     );
   }
 
-  Column buildLoadedMovieDetails(Movie movieDetails) {
+  Widget _buildLoadedMovieDetails(MovieUIModel movieDetails) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text('Genres: ${movieDetails.genreNames.join(', ')}'),
-      if (movieDetails.budget != 0) Text('Budget: \$${(movieDetails.budget / 1000000).round()}M'),
-      if (movieDetails.revenue != 0) Text('Revenue: \$${(movieDetails.revenue / 1000000).round()}M'),
+      Text('Genres: ${movieDetails.genreNames}'),
+      Text('Budget: \$${movieDetails.budget}M'),
+      Text('Revenue: \$${movieDetails.revenue}M'),
       if (movieDetails.homepage.isNotEmpty)
         Padding(
           padding: const EdgeInsets.only(top: 8.0),

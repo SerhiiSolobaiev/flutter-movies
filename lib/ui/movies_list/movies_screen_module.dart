@@ -1,9 +1,7 @@
-import 'package:get_it/get_it.dart';
-
-import '../../domain/movies_interactor.dart';
-import 'movies_list_bloc.dart';
+part of movies_screen;
 
 void registerMovieScreenModule(GetIt getIt) {
   getIt.registerLazySingleton(() => MoviesInteractor(getIt()));
-  getIt.registerFactory(() => MoviesListBloc(getIt()));
+  getIt.registerLazySingleton(() => MovieUIMapper());
+  getIt.registerFactory(() => MoviesListBloc(getIt(), getIt()));
 }

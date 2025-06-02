@@ -1,4 +1,4 @@
-import 'package:flutter_onboarding/repository/storage/movie_dao_model.dart';
+part of repository_movies;
 
 abstract interface class MoviesStorage {
   Future addMovies(List<MovieDaoModel> movies);
@@ -6,6 +6,4 @@ abstract interface class MoviesStorage {
   Future<List<MovieDaoModel>> getMovies();
 
   Future<int?> deleteAll();
-
-  Future<bool> isMoviesCacheDirty();
 }

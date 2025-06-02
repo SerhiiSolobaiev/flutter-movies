@@ -1,7 +1,4 @@
-import 'dart:async';
-import 'package:dio/dio.dart';
-import 'package:flutter_onboarding/network/movie_response.dart';
-import 'package:flutter_onboarding/network/movies_response.dart';
+part of network;
 
 class MoviesApiHelper {
   final Dio _dio;

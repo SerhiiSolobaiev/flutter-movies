@@ -1,15 +1,15 @@
-part of 'movies_list_bloc.dart';
+part of movies_screen;
 
 @immutable
 sealed class MoviesListEvent {
   const MoviesListEvent();
 }
 
-final class MoviesInitialEvent extends MoviesListEvent {}
+final class LoadMoviesEvent extends MoviesListEvent {}
 
 final class MovieClickedEvent extends MoviesListEvent {
   final BuildContext context;
-  final Movie movie;
+  final MovieUIModel movie;
 
   const MovieClickedEvent(this.context, this.movie);
 }

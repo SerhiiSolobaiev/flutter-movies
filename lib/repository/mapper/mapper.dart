@@ -1,16 +1,14 @@
-import '../../domain/movie.dart';
-import '../../network/movie_response.dart';
-import '../../network/movies_response.dart';
-import '../storage/movie_dao_model.dart';
+part of repository_movies;
 
 class MovieMapper {
-  List<Movie> mapResponseToMovies(MoviesResponse moviesResponse) {
-    final futures = moviesResponse.movies.map(mapResponseToMovie).toList();
-    return futures;
+  List<MovieLocalModel> mapResponseToMovies(MoviesResponse? moviesResponse) {
+    if (moviesResponse == null) return List.empty();
+    return moviesResponse.movies.mapNotNull(mapResponseToMovie).toList();
   }
 
-  Movie mapResponseToMovie(MovieResponse movieResponse) {
-    return Movie(
+  MovieLocalModel? mapResponseToMovie(MovieResponse? movieResponse) {
+    if (movieResponse == null) return null;
+    return MovieLocalModel(
       id: movieResponse.id ?? 0,
       title: movieResponse.title ?? '',
       overview: movieResponse.overview ?? '',
@@ -24,8 +22,8 @@ class MovieMapper {
     );
   }
 
-  Movie mapDaoToDomain(MovieDaoModel local) {
-    return Movie(
+  MovieLocalModel mapDaoToDomain(MovieDaoModel local) {
+    return MovieLocalModel(
       id: local.id,
       title: local.title,
       overview: local.overview,
@@ -35,7 +33,7 @@ class MovieMapper {
     );
   }
 
-  MovieDaoModel mapDomainToDao(Movie movie) {
+  MovieDaoModel mapDomainToDao(MovieLocalModel movie) {
     return MovieDaoModel(
       id: movie.id,
       title: movie.title,
