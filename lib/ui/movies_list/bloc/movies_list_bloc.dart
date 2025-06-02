@@ -16,18 +16,17 @@ class _MoviesListBloc extends Bloc<_MoviesListEvent, _MoviesListState> {
     emit(_MoviesListState(isLoading: true));
     try {
       final movies = await _movieInteractor.getMovies();
-      List<_MovieUIModel> moviesUIData =
-      await Future.wait(movies.map(_mapper.mapToUIData));
-      emit(_MoviesListState(title: "Popular Movies", movies: moviesUIData, isLoading: false, error: null));
+      List<_MovieUIModel> moviesUIData = await Future.wait(movies.map(_mapper.mapToUIData));
+      emit(_MoviesListState(title: LocaleKeys.popular_movies.tr(), movies: moviesUIData, isLoading: false));
     } catch (e) {
       emit(_MoviesListState(error: e.toString(), isLoading: false));
     }
   }
 
   Future _onNavigateToMovieDetails(
-      _MovieClickedEvent event,
-      Emitter<_MoviesListState> emit,
-      ) async {
+    _MovieClickedEvent event,
+    Emitter<_MoviesListState> emit,
+  ) async {
     Navigator.of(event.context).push(MaterialPageRoute(builder: (context) => MovieDetailsScreen(movie: event.movie)));
   }
 }

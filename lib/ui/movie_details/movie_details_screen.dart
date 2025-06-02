@@ -27,7 +27,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
         listener: (context, state) {
           if (state.error != null) {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text("Cannot load movie details")),
+              SnackBar(content: Text(LocaleKeys.error.tr())),
             );
           }
         },
@@ -71,8 +71,8 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                 style: const TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 16),
-              Text('Rating: ${movieDetails.voteAverage}'),
-              Text('Release Date: ${movieDetails.releaseDate}'),
+              Text('${LocaleKeys.movie_details_rating.tr()}: ${movieDetails.voteAverage}'),
+              Text('${LocaleKeys.movie_details_release_date.tr()}: ${movieDetails.releaseDate}'),
               const SizedBox(height: 16),
 
               // Loaded Movie Details:
@@ -90,9 +90,9 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
 
   Widget _buildLoadedMovieDetails(_MovieUIModel movieDetails) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      if (movieDetails.genreNames.isNotEmpty) Text('Genres: ${movieDetails.genreNames}'),
-      if (movieDetails.budget.isNotEmpty) Text('Budget: \$${movieDetails.budget}M'),
-      if (movieDetails.revenue.isNotEmpty) Text('Revenue: \$${movieDetails.revenue}M'),
+      if (movieDetails.genreNames.isNotEmpty) Text('${LocaleKeys.movie_details_genres.tr()}: ${movieDetails.genreNames}'),
+      if (movieDetails.budget.isNotEmpty) Text('${LocaleKeys.movie_details_budget.tr()}: \$${movieDetails.budget}${LocaleKeys.millions}'),
+      if (movieDetails.revenue.isNotEmpty) Text('${LocaleKeys.movie_details_revenue.tr()}: \$${movieDetails.revenue}${LocaleKeys.millions}'),
       if (movieDetails.homepage.isNotEmpty)
         Padding(
           padding: const EdgeInsets.only(top: 8.0),
@@ -104,7 +104,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
               }
             },
             child: Text(
-              'Homepage: ${movieDetails.homepage}',
+              '${LocaleKeys.movie_details_homepage.tr()}: ${movieDetails.homepage}',
               style: const TextStyle(
                 color: Colors.blue,
                 decoration: TextDecoration.underline,

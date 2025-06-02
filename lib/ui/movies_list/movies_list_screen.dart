@@ -36,8 +36,7 @@ class _MoviesListScreenState extends State<MoviesListScreen> {
         if (state.isLoading) {
           return const Center(child: CircularProgressIndicator());
         } else if (state.movies.isEmpty) {
-          // TODO: show error
-          return const Center(child: Text('No data'));
+          return Center(child: Text(LocaleKeys.error.tr()));
         } else {
           return ListView.builder(
               itemCount: state.movies.length,
@@ -59,9 +58,9 @@ class _MoviesListScreenState extends State<MoviesListScreen> {
                       )),
                   title: Text(movie.title),
                   subtitle: Row(children: [
-                    Text('Rating: ${movie.voteAverage}'),
+                    Text('${LocaleKeys.movie_details_rating.tr()}: ${movie.voteAverage}'),
                     const SizedBox(width: 8),
-                    Text('Year: ${movie.releaseDate}')
+                    Text('${LocaleKeys.movie_details_year.tr()}: ${movie.releaseDate}')
                   ]),
                   onTap: () {
                     _bloc.add(_MovieClickedEvent(context, movie));
