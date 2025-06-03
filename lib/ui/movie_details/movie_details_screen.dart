@@ -91,8 +91,8 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
   Widget _buildLoadedMovieDetails(_MovieUIModel movieDetails) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       if (movieDetails.genreNames.isNotEmpty) Text('${LocaleKeys.movie_details_genres.tr()}: ${movieDetails.genreNames}'),
-      if (movieDetails.budget.isNotEmpty) Text('${LocaleKeys.movie_details_budget.tr()}: \$${movieDetails.budget}${LocaleKeys.millions}'),
-      if (movieDetails.revenue.isNotEmpty) Text('${LocaleKeys.movie_details_revenue.tr()}: \$${movieDetails.revenue}${LocaleKeys.millions}'),
+      if (movieDetails.budget.isNotEmpty) Text('${LocaleKeys.movie_details_budget.tr()}: \$${movieDetails.budget}${LocaleKeys.millions.tr()}'),
+      if (movieDetails.revenue.isNotEmpty) Text('${LocaleKeys.movie_details_revenue.tr()}: \$${movieDetails.revenue}${LocaleKeys.millions.tr()}'),
       if (movieDetails.homepage.isNotEmpty)
         Padding(
           padding: const EdgeInsets.only(top: 8.0),

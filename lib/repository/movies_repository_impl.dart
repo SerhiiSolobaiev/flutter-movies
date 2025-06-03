@@ -2,7 +2,7 @@ part of repository_movies;
 
 class _MoviesRepositoryImpl implements MoviesRepository {
   final MoviesApiHelper apiHelper;
-  final MovieDao moviesStorage;
+  final MoviesStorage moviesStorage;
   final _MovieMapper mapper;
   final _sharedPrefs = SharedPreferencesAsync();
 
