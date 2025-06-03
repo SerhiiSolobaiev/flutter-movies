@@ -1,13 +1,22 @@
 part of repository_movies;
 
 class _MovieMapper {
-  List<MovieLocalModel> mapResponseToMovies(MoviesResponse? moviesResponse) {
-    if (moviesResponse == null) return List.empty();
+  List<MovieLocalModel> mapResponseToMovies(MoviesResponse moviesResponse) {
     return moviesResponse.movies.mapNotNull(mapResponseToMovie).toList();
   }
 
-  MovieLocalModel? mapResponseToMovie(MovieResponse? movieResponse) {
-    if (movieResponse == null) return null;
+  MovieLocalModel? mapResponseToMovie(MovieResponse movieResponse) {
+    return MovieLocalModel(
+      id: movieResponse.id ?? 0,
+      title: movieResponse.title ?? '',
+      overview: movieResponse.overview ?? '',
+      posterPath: movieResponse.posterPath ?? '',
+      voteAverage: movieResponse.voteAverage ?? 0,
+      releaseDate: movieResponse.releaseDate ?? '',
+    );
+  }
+
+  MovieLocalModel? mapResponseToMovieDetails(MovieDetailsResponse movieResponse) {
     return MovieLocalModel(
       id: movieResponse.id ?? 0,
       title: movieResponse.title ?? '',

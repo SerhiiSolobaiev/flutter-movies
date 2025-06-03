@@ -6,6 +6,8 @@ import 'package:get_it/get_it.dart';
 
 part 'movie_response.dart';
 
+part 'movie_details_response.dart';
+
 part 'movies_response.dart';
 
 part 'bearer_interceptor.dart';

@@ -46,7 +46,7 @@ class _MoviesRepositoryImpl implements MoviesRepository {
 
   @override
   Future<MovieLocalModel?> getMovieDetails(int movieId) {
-    return apiHelper.getMoviesDetails(movieId).then((details) => mapper.mapResponseToMovie(details));
+    return apiHelper.getMoviesDetails(movieId).then((details) => mapper.mapResponseToMovieDetails(details));
   }
 
   Future<bool> _isMoviesCacheDirty() async {
