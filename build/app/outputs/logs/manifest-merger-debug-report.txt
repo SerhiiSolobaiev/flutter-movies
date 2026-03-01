@@ -1,0 +1,348 @@
+-- Merging decision tree log ---
+application
+INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:2:5-33:19
+INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+MERGED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/uptech/.gradle/caches/transforms-3/055d0e26bb558d1be1a3c4475facead0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/uptech/.gradle/caches/transforms-3/055d0e26bb558d1be1a3c4475facead0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/uptech/.gradle/caches/transforms-3/3018a8905b2f646184efbf6c3a6b74d1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/uptech/.gradle/caches/transforms-3/3018a8905b2f646184efbf6c3a6b74d1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+	android:name
+		INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml
+manifest
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:1:1-50:12
+MERGED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:1:1-50:12
+INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+MERGED from [:shared_preferences_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-14:12
+MERGED from [:path_provider_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:sqflite_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/sqflite_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.preference:preference:1.2.1] /Users/uptech/.gradle/caches/transforms-3/4b99539c74c9c3a8a1f0c5dea3ccbfbe/transformed/preference-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.8.0] /Users/uptech/.gradle/caches/transforms-3/4373eaddec82c1a12745b287714c8ac3/transformed/browser-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/uptech/.gradle/caches/transforms-3/f3b6a9f9d167af5fc91f1786494815ff/transformed/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/uptech/.gradle/caches/transforms-3/e5f20a85c4ae709276ab473e8e4e629b/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/uptech/.gradle/caches/transforms-3/d8c30c49abb68755b74c5234f1f43458/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.window:window-java:1.2.0] /Users/uptech/.gradle/caches/transforms-3/c30969900cd08a06180edf7599a6b9ff/transformed/jetified-window-java-1.2.0/AndroidManifest.xml:17:1-21:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/uptech/.gradle/caches/transforms-3/4fecbc3ab79a6820d741c53d19536689/transformed/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.7.1] /Users/uptech/.gradle/caches/transforms-3/d31712596fafe6b8722e993d84b4a1a7/transformed/jetified-fragment-ktx-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/uptech/.gradle/caches/transforms-3/297879db144def1e6350f872cb1d1faf/transformed/fragment-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/uptech/.gradle/caches/transforms-3/5fee992072caffc74b4e5fcaa6bb52e5/transformed/jetified-activity-ktx-1.8.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.8.1] /Users/uptech/.gradle/caches/transforms-3/f571673ef4285f0521be6172e53174bd/transformed/jetified-activity-1.8.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/uptech/.gradle/caches/transforms-3/8c4651a76a5d1d775445e9a17c5526ae/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/uptech/.gradle/caches/transforms-3/078bc6c3e3785b38659459de4d6f9275/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/uptech/.gradle/caches/transforms-3/042110ff6c992eea4e5a77672060fd09/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/uptech/.gradle/caches/transforms-3/dc61fead265db1be1b8f34f007541825/transformed/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/a20f0645194f7f3b777c3c85b4cf6f6d/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/eb86b9fd6c9883720761b9a3c8880c31/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/uptech/.gradle/caches/transforms-3/8b4c8b332e946ba4f08efc2236fa85cf/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/uptech/.gradle/caches/transforms-3/d262281cf28cc38eb62df71b4289ac8c/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/dfc34100d29109f8a148f029432a8d39/transformed/jetified-lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/uptech/.gradle/caches/transforms-3/8c7fa82331b3319a2a1342617e8f8b70/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/e0ff1733201002ab2aa0fa951c21e9e4/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/62452976bea6aa75d662fd5e235192ad/transformed/jetified-lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/uptech/.gradle/caches/transforms-3/3cdb6f1cc301cd926c3c0c47379c21c1/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/uptech/.gradle/caches/transforms-3/c1a3ef30ed2b493bb1fdcf05725182e2/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/uptech/.gradle/caches/transforms-3/b1324468acac9a6f693a047c7c2fbdd6/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/uptech/.gradle/caches/transforms-3/9923b376ba60e7ac03defc1ccef12499/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/uptech/.gradle/caches/transforms-3/f599feafab13c3c8c72d614f691567db/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/uptech/.gradle/caches/transforms-3/4d4f634cbb136ea459c32d26e3f1ba1e/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/uptech/.gradle/caches/transforms-3/c944ffb8c8dc0fc995d2737f852a1cba/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/uptech/.gradle/caches/transforms-3/28884b7af7adadba226a6497bb3bcc38/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/uptech/.gradle/caches/transforms-3/2c647bfdfb0bf5abd377659c4c167538/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/dc7ca78ab7a59d94cc0d1e4ab462d100/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/uptech/.gradle/caches/transforms-3/cc155928311f7dfffe72344e5a4b0de8/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/uptech/.gradle/caches/transforms-3/055d0e26bb558d1be1a3c4475facead0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/uptech/.gradle/caches/transforms-3/51c163c262d38f2d7d28e76f4334e67d/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/uptech/.gradle/caches/transforms-3/927890fbae17fc612ad3267df9472b10/transformed/exifinterface-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/14cb4949aa5b7477119b2839d423efa9/transformed/jetified-datastore-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/b2269d99b8b23960b97e6f3d9c1229a1/transformed/jetified-datastore-preferences-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/de61aafebda5e8e318164ebf122ef324/transformed/jetified-datastore-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/uptech/.gradle/caches/transforms-3/0cb2d26981ed1249e95d53853aceeb67/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/uptech/.gradle/caches/transforms-3/3018a8905b2f646184efbf6c3a6b74d1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/uptech/.gradle/caches/transforms-3/302850dde92f437f6f13926419d5ff6d/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/uptech/.gradle/caches/transforms-3/acca4099420fbb62cffd487011fed746/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/uptech/.gradle/caches/transforms-3/6825ea4524cc1459cfc3b16e3ad2d341/transformed/jetified-core-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/uptech/.gradle/caches/transforms-3/70775021a7fcff39913d7ad60d4677e3/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/uptech/.gradle/caches/transforms-3/1d8e4deba7ef2bad723eff52d3ef3d7d/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/uptech/.gradle/caches/transforms-3/ff69d2f446d901eae8fd2192d0ddf1d3/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/uptech/.gradle/caches/transforms-3/b14cc0ced62551a1c56346a6fe9b9b8d/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/uptech/.gradle/caches/transforms-3/f22df3fbc9efbafedd1500d2138ab981/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:1:11-69
+queries
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:39:5-49:15
+intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:40:9-43:18
+action#android.intent.action.PROCESS_TEXT
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:41:13-72
+	android:name
+		ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:41:21-70
+data
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:42:13-50
+	android:mimeType
+		ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:42:19-48
+intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:44:9-48:18
+action#android.intent.action.VIEW
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:45:13-65
+	android:name
+		ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:45:21-62
+category#android.intent.category.BROWSABLE
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:46:13-74
+	android:name
+		ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/main/AndroidManifest.xml:46:23-71
+uses-permission#android.permission.INTERNET
+ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml:6:22-64
+uses-sdk
+INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+MERGED from [:shared_preferences_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/sqflite_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/sqflite_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.preference:preference:1.2.1] /Users/uptech/.gradle/caches/transforms-3/4b99539c74c9c3a8a1f0c5dea3ccbfbe/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.2.1] /Users/uptech/.gradle/caches/transforms-3/4b99539c74c9c3a8a1f0c5dea3ccbfbe/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.8.0] /Users/uptech/.gradle/caches/transforms-3/4373eaddec82c1a12745b287714c8ac3/transformed/browser-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.8.0] /Users/uptech/.gradle/caches/transforms-3/4373eaddec82c1a12745b287714c8ac3/transformed/browser-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/uptech/.gradle/caches/transforms-3/f3b6a9f9d167af5fc91f1786494815ff/transformed/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/uptech/.gradle/caches/transforms-3/f3b6a9f9d167af5fc91f1786494815ff/transformed/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/uptech/.gradle/caches/transforms-3/e5f20a85c4ae709276ab473e8e4e629b/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/uptech/.gradle/caches/transforms-3/e5f20a85c4ae709276ab473e8e4e629b/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/uptech/.gradle/caches/transforms-3/d8c30c49abb68755b74c5234f1f43458/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/uptech/.gradle/caches/transforms-3/d8c30c49abb68755b74c5234f1f43458/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window-java:1.2.0] /Users/uptech/.gradle/caches/transforms-3/c30969900cd08a06180edf7599a6b9ff/transformed/jetified-window-java-1.2.0/AndroidManifest.xml:19:5-44
+MERGED from [androidx.window:window-java:1.2.0] /Users/uptech/.gradle/caches/transforms-3/c30969900cd08a06180edf7599a6b9ff/transformed/jetified-window-java-1.2.0/AndroidManifest.xml:19:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/uptech/.gradle/caches/transforms-3/4fecbc3ab79a6820d741c53d19536689/transformed/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/uptech/.gradle/caches/transforms-3/4fecbc3ab79a6820d741c53d19536689/transformed/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.7.1] /Users/uptech/.gradle/caches/transforms-3/d31712596fafe6b8722e993d84b4a1a7/transformed/jetified-fragment-ktx-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.7.1] /Users/uptech/.gradle/caches/transforms-3/d31712596fafe6b8722e993d84b4a1a7/transformed/jetified-fragment-ktx-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/uptech/.gradle/caches/transforms-3/297879db144def1e6350f872cb1d1faf/transformed/fragment-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/uptech/.gradle/caches/transforms-3/297879db144def1e6350f872cb1d1faf/transformed/fragment-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/uptech/.gradle/caches/transforms-3/5fee992072caffc74b4e5fcaa6bb52e5/transformed/jetified-activity-ktx-1.8.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.1] /Users/uptech/.gradle/caches/transforms-3/5fee992072caffc74b4e5fcaa6bb52e5/transformed/jetified-activity-ktx-1.8.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.8.1] /Users/uptech/.gradle/caches/transforms-3/f571673ef4285f0521be6172e53174bd/transformed/jetified-activity-1.8.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.1] /Users/uptech/.gradle/caches/transforms-3/f571673ef4285f0521be6172e53174bd/transformed/jetified-activity-1.8.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/uptech/.gradle/caches/transforms-3/8c4651a76a5d1d775445e9a17c5526ae/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/uptech/.gradle/caches/transforms-3/8c4651a76a5d1d775445e9a17c5526ae/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/uptech/.gradle/caches/transforms-3/078bc6c3e3785b38659459de4d6f9275/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/uptech/.gradle/caches/transforms-3/078bc6c3e3785b38659459de4d6f9275/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/uptech/.gradle/caches/transforms-3/042110ff6c992eea4e5a77672060fd09/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/uptech/.gradle/caches/transforms-3/042110ff6c992eea4e5a77672060fd09/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/uptech/.gradle/caches/transforms-3/dc61fead265db1be1b8f34f007541825/transformed/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/uptech/.gradle/caches/transforms-3/dc61fead265db1be1b8f34f007541825/transformed/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/a20f0645194f7f3b777c3c85b4cf6f6d/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/a20f0645194f7f3b777c3c85b4cf6f6d/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/eb86b9fd6c9883720761b9a3c8880c31/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/eb86b9fd6c9883720761b9a3c8880c31/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/uptech/.gradle/caches/transforms-3/8b4c8b332e946ba4f08efc2236fa85cf/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/uptech/.gradle/caches/transforms-3/8b4c8b332e946ba4f08efc2236fa85cf/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/uptech/.gradle/caches/transforms-3/d262281cf28cc38eb62df71b4289ac8c/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/uptech/.gradle/caches/transforms-3/d262281cf28cc38eb62df71b4289ac8c/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/dfc34100d29109f8a148f029432a8d39/transformed/jetified-lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/dfc34100d29109f8a148f029432a8d39/transformed/jetified-lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/uptech/.gradle/caches/transforms-3/8c7fa82331b3319a2a1342617e8f8b70/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/uptech/.gradle/caches/transforms-3/8c7fa82331b3319a2a1342617e8f8b70/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/e0ff1733201002ab2aa0fa951c21e9e4/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/e0ff1733201002ab2aa0fa951c21e9e4/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/62452976bea6aa75d662fd5e235192ad/transformed/jetified-lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/uptech/.gradle/caches/transforms-3/62452976bea6aa75d662fd5e235192ad/transformed/jetified-lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/uptech/.gradle/caches/transforms-3/3cdb6f1cc301cd926c3c0c47379c21c1/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/uptech/.gradle/caches/transforms-3/3cdb6f1cc301cd926c3c0c47379c21c1/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/uptech/.gradle/caches/transforms-3/c1a3ef30ed2b493bb1fdcf05725182e2/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/uptech/.gradle/caches/transforms-3/c1a3ef30ed2b493bb1fdcf05725182e2/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/uptech/.gradle/caches/transforms-3/b1324468acac9a6f693a047c7c2fbdd6/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/uptech/.gradle/caches/transforms-3/b1324468acac9a6f693a047c7c2fbdd6/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/uptech/.gradle/caches/transforms-3/9923b376ba60e7ac03defc1ccef12499/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/uptech/.gradle/caches/transforms-3/9923b376ba60e7ac03defc1ccef12499/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/uptech/.gradle/caches/transforms-3/f599feafab13c3c8c72d614f691567db/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/uptech/.gradle/caches/transforms-3/f599feafab13c3c8c72d614f691567db/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/uptech/.gradle/caches/transforms-3/4d4f634cbb136ea459c32d26e3f1ba1e/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/uptech/.gradle/caches/transforms-3/4d4f634cbb136ea459c32d26e3f1ba1e/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/uptech/.gradle/caches/transforms-3/c944ffb8c8dc0fc995d2737f852a1cba/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] /Users/uptech/.gradle/caches/transforms-3/c944ffb8c8dc0fc995d2737f852a1cba/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/uptech/.gradle/caches/transforms-3/28884b7af7adadba226a6497bb3bcc38/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/uptech/.gradle/caches/transforms-3/28884b7af7adadba226a6497bb3bcc38/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/uptech/.gradle/caches/transforms-3/2c647bfdfb0bf5abd377659c4c167538/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/uptech/.gradle/caches/transforms-3/2c647bfdfb0bf5abd377659c4c167538/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/dc7ca78ab7a59d94cc0d1e4ab462d100/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/uptech/.gradle/caches/transforms-3/dc7ca78ab7a59d94cc0d1e4ab462d100/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/uptech/.gradle/caches/transforms-3/cc155928311f7dfffe72344e5a4b0de8/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/uptech/.gradle/caches/transforms-3/cc155928311f7dfffe72344e5a4b0de8/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/uptech/.gradle/caches/transforms-3/055d0e26bb558d1be1a3c4475facead0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/uptech/.gradle/caches/transforms-3/055d0e26bb558d1be1a3c4475facead0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/uptech/.gradle/caches/transforms-3/51c163c262d38f2d7d28e76f4334e67d/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/uptech/.gradle/caches/transforms-3/51c163c262d38f2d7d28e76f4334e67d/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/uptech/.gradle/caches/transforms-3/927890fbae17fc612ad3267df9472b10/transformed/exifinterface-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/uptech/.gradle/caches/transforms-3/927890fbae17fc612ad3267df9472b10/transformed/exifinterface-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/14cb4949aa5b7477119b2839d423efa9/transformed/jetified-datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/14cb4949aa5b7477119b2839d423efa9/transformed/jetified-datastore-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/b2269d99b8b23960b97e6f3d9c1229a1/transformed/jetified-datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/b2269d99b8b23960b97e6f3d9c1229a1/transformed/jetified-datastore-preferences-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/de61aafebda5e8e318164ebf122ef324/transformed/jetified-datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.3] /Users/uptech/.gradle/caches/transforms-3/de61aafebda5e8e318164ebf122ef324/transformed/jetified-datastore-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/uptech/.gradle/caches/transforms-3/0cb2d26981ed1249e95d53853aceeb67/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/uptech/.gradle/caches/transforms-3/0cb2d26981ed1249e95d53853aceeb67/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/uptech/.gradle/caches/transforms-3/3018a8905b2f646184efbf6c3a6b74d1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/uptech/.gradle/caches/transforms-3/3018a8905b2f646184efbf6c3a6b74d1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/uptech/.gradle/caches/transforms-3/302850dde92f437f6f13926419d5ff6d/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/uptech/.gradle/caches/transforms-3/302850dde92f437f6f13926419d5ff6d/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/uptech/.gradle/caches/transforms-3/acca4099420fbb62cffd487011fed746/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/uptech/.gradle/caches/transforms-3/acca4099420fbb62cffd487011fed746/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/uptech/.gradle/caches/transforms-3/6825ea4524cc1459cfc3b16e3ad2d341/transformed/jetified-core-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/uptech/.gradle/caches/transforms-3/6825ea4524cc1459cfc3b16e3ad2d341/transformed/jetified-core-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/uptech/.gradle/caches/transforms-3/70775021a7fcff39913d7ad60d4677e3/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/uptech/.gradle/caches/transforms-3/70775021a7fcff39913d7ad60d4677e3/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/uptech/.gradle/caches/transforms-3/1d8e4deba7ef2bad723eff52d3ef3d7d/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/uptech/.gradle/caches/transforms-3/1d8e4deba7ef2bad723eff52d3ef3d7d/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/uptech/.gradle/caches/transforms-3/ff69d2f446d901eae8fd2192d0ddf1d3/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/uptech/.gradle/caches/transforms-3/ff69d2f446d901eae8fd2192d0ddf1d3/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/uptech/.gradle/caches/transforms-3/b14cc0ced62551a1c56346a6fe9b9b8d/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/uptech/.gradle/caches/transforms-3/b14cc0ced62551a1c56346a6fe9b9b8d/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/uptech/.gradle/caches/transforms-3/f22df3fbc9efbafedd1500d2138ab981/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:5:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/uptech/.gradle/caches/transforms-3/f22df3fbc9efbafedd1500d2138ab981/transformed/jetified-relinker-1.4.5/AndroidManifest.xml:5:5-43
+	android:targetSdkVersion
+		INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/android/app/src/debug/AndroidManifest.xml
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher_android] /Users/uptech/Documents/StudioProjects/flutter_movies/flutter-onboarding/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-74
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+	android:required
+		ADDED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+	android:required
+		ADDED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.window:window:1.2.0] /Users/uptech/.gradle/caches/transforms-3/031d9f5b281ce9326ab2e38185d44d90/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/uptech/.gradle/caches/transforms-3/055d0e26bb558d1be1a3c4475facead0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/uptech/.gradle/caches/transforms-3/055d0e26bb558d1be1a3c4475facead0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/uptech/.gradle/caches/transforms-3/554247c58f83de347261c8ad17b168b5/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+permission#com.example.flutter_onboarding.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+uses-permission#com.example.flutter_onboarding.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] /Users/uptech/.gradle/caches/transforms-3/d633982244950e228f25290224c6ba01/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/uptech/.gradle/caches/transforms-3/86e3f4e351bff8bc3e547bc72f82cd96/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

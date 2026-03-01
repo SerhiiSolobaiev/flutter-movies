@@ -2,8 +2,6 @@
 
 ## Overview
 
-To help iOS and Android developers from the mobile development team onboard into the Flutter project, we recommend completing an introductory exercise designed to familiarize them with Flutter technology. This task will guide developers through setting up Android Studio, installing the Flutter and Dart plugins, and managing dependencies. Additionally, it will provide hands-on experience with how different application layers interact.
-
 As part of this exercise, developers will also:
 - Build application screens using Flutter’s declarative UI
 - Manage routing between screens
@@ -26,17 +24,11 @@ Endpoint to retrieve a movie details \
 
 Headers required to perform request
 ```
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMWY0ZDg2MzY0ZjY2YWI0OGJkNjJmMGMzYmM4YmJjOSIsIm5iZiI6MTc0MjM4OTY4OS41NzQwMDAxLCJzdWIiOiI2N2RhYzFiOTdiYTdkYTcxNjNhMWVjMWQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.w8AObWJ7pJ9yxTupyNJxNYOcSKocHXI4NvFcsz0mx8M
+Authorization: Bearer ***
 ```
 ```
 accept: application/json
 ```
-
-## Design
-
-All sizes, fonts, and other design specifications should be referenced from the design mockup.
-
-**https://www.figma.com/design/h3sVnuLw2dO0vjj5Huebfy/pdfFiller-iOS?node-id=45312-3610&t=jwjbHrfz0omhznJ7-0**
 
 ## Functional requirements
 
@@ -52,11 +44,5 @@ All sizes, fonts, and other design specifications should be referenced from the 
     - On app startup, check for cached data and use it instead of making an API request if available.
 
 
-## Evaluation Process
-
-Upon completion, the Flutter development team from the mobile department will review the implementation. The review will cover each component, discussing best practices and solutions aligned with the company’s agreed-upon mobile development standards. This process aims to ensure a better understanding of our cross-platform development approaches.
-
-## Recommended libraries to use during the project development
-
-- Flutter BLoC architecture - https://pub.dev/packages/flutter_bloc
-- API - https://pub.dev/packages/dio
+## Screenshots
+// TODO:

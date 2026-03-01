@@ -1,0 +1,15 @@
+{
+  "popular_movies": "Popular Movies",
+  "no_data": "No movies available",
+  "error": "Cannot load movie details",
+  "movie_details": {
+    "year": "Year",
+    "rating": "Rating",
+    "release_date": "Release Date",
+    "genres": "Genres",
+    "budget": "Budget",
+    "revenue": "Revenue",
+    "homepage": "Homepage"
+  },
+  "millions": "M"
+}
