@@ -1,0 +1,15 @@
+{
+  "popular_movies": "Популярні фільми",
+  "no_data": "Немає фільмів:(",
+  "error": "Неможливо завантажити фільм",
+  "movie_details": {
+    "year": "Year",
+    "rating": "Рейтинг",
+    "release_date": "Дата виходу",
+    "genres": "Жанри",
+    "budget": "Бюджет",
+    "revenue": "Дохід",
+    "homepage": "Сторінка"
+  },
+  "millions": "M"
+}
