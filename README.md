@@ -10,8 +10,6 @@ As part of this exercise, developers will also:
 - Interact with a database
 - Work with dependency management
 
-By completing this task, developers will gain valuable insights into Flutter’s workflow and architecture, making it easier to transition into the project. Any challenges encountered during the process will also help prepare them to troubleshoot similar issues in real-world development.
-
 ## API
 
 **[TMDB (The Movie Database) public API](https://developer.themoviedb.org/docs/getting-started)**
@@ -45,4 +43,6 @@ accept: application/json
 
 
 ## Screenshots
-// TODO:
+https://github.com/user-attachments/assets/b179f243-5db6-4349-a58f-f1720228e999
+
+
